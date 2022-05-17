@@ -13,7 +13,6 @@ function onDragStart(event) { // 드래그
 	  event.dataTransfer.setData('text', event.target.id);
 	}
 
-	
 function onDrop(event) { // 드래그 후
 	event.preventDefault();
 	var data = event.dataTransfer.getData("text");
@@ -45,6 +44,18 @@ function disblock(data){
 	console.log("img3 : " + data);
 	document.getElementById(data1).style.display = "block";
 	console.log("data1 : " + data1);
+	}else if(data == "img4"){
+	console.log("img4 : " + data);
+	document.getElementById(data1).style.display = "block";
+	console.log("data1 : " + data1);
+	}else if(data == "img5"){
+	console.log("img5 : " + data);
+	document.getElementById(data1).style.display = "block";
+	console.log("data1 : " + data1);
+	}else if(data == "img6"){
+	console.log("img6 : " + data);
+	document.getElementById(data1).style.display = "block";
+	console.log("data1 : " + data1);
 	}else{
 		console.log(123);
 		return;
@@ -62,12 +73,20 @@ function disnone(data){
 		}else if(data == "img3-1"){
 		console.log("img3 : " + data);
 		document.getElementById(data).style.display = "none";
+		}else if(data == "img4-1"){
+		console.log("img4 : " + data);
+		document.getElementById(data).style.display = "none";
+		}else if(data == "img5-1"){
+		console.log("img5 : " + data);
+		document.getElementById(data).style.display = "none";
+		}else if(data == "img6-1"){
+		console.log("img6 : " + data);
+		document.getElementById(data).style.display = "none";
 		}else{
 			console.log(456);
 			return;
 		}
 }
-
 
 function onDragOver(event) { // 위치
 		event.preventDefault();
@@ -83,23 +102,32 @@ function onDragOver(event) { // 위치
 <body>
 
 
-<div class="area1" ondrop="onDrop2(event)" ondragover="onDragOver(event)">
+<div class="area1 scroll" ondrop="onDrop2(event)" ondragover="onDragOver(event)">
 <div class="area1-1"></div>
-<div class="area1-2" id="img1" draggable="true" ondragstart="onDragStart(event)" value="1">UBISTORM IMG 1</div>
-<div class="area1-2" id="img2" draggable="true" ondragstart="onDragStart(event)" value="2">UBISTORM IMG 2</div>
-<div class="area1-2" id="img3" draggable="true" ondragstart="onDragStart(event)" value="3">UBISTORM IMG 3</div>
+<div class="area1-2" id="img1" draggable="true" ondragstart="onDragStart(event)">UBISTORM IMG 1</div>
+<div class="area1-2" id="img2" draggable="true" ondragstart="onDragStart(event)">UBISTORM IMG 2</div>
+<div class="area1-2" id="img3" draggable="true" ondragstart="onDragStart(event)">UBISTORM IMG 3</div>
+<div class="area1-2" id="img4" draggable="true" ondragstart="onDragStart(event)">UBISTORM IMG 4</div>
+<div class="area1-2" id="img5" draggable="true" ondragstart="onDragStart(event)">UBISTORM IMG 5</div>
+<div class="area1-2" id="img6" draggable="true" ondragstart="onDragStart(event)">UBISTORM IMG 6</div>
 </div>
 
-<div class="area2" ondrop="onDrop(event)" ondragover="onDragOver(event)">
+<div class="area2 scroll" ondrop="onDrop(event)" ondragover="onDragOver(event)">
 <div class="area2-1"></div>
 <div class="area2-2" id="img1-1" style="display: none;" draggable="true" ondragstart="onDragStart(event)">UBISTORM IMG 1</div>
 <div class="area2-2" id="img2-1" style="display: none;" draggable="true" ondragstart="onDragStart(event)">UBISTORM IMG 2</div>
 <div class="area2-2" id="img3-1" style="display: none;" draggable="true" ondragstart="onDragStart(event)">UBISTORM IMG 3</div>
+<div class="area2-2" id="img4-1" style="display: none;" draggable="true" ondragstart="onDragStart(event)">UBISTORM IMG 4</div>
+<div class="area2-2" id="img5-1" style="display: none;" draggable="true" ondragstart="onDragStart(event)">UBISTORM IMG 5</div>
+<div class="area2-2" id="img6-1" style="display: none;" draggable="true" ondragstart="onDragStart(event)">UBISTORM IMG 6</div>
 </div>
 
 <div class="area3">
 <div style="margin-top: 50px;">
-UBISTORMUBISTORMUBISTORMUBISTORMUBISTORMUBISTORMUBISTORMUBISTORM
+UBISTORMUBISTORMUBISTORMUBISTORMUBISTORMUBISTORMUBISTORM
+<br>UBISTORM<br>UBISTORM<br>UBISTORM<br>UBISTORM<br>UBISTORM<br>UBISTORM<br>UBISTORM<br>UBISTORM<br>UBISTORM
+<br>UBISTORM<br>UBISTORM<br>UBISTORM<br>UBISTORM<br>UBISTORM<br>UBISTORM<br>UBISTORM<br>UBISTORM<br>UBISTORM
+<br>UBISTORM<br>UBISTORM<br>UBISTORM<br>UBISTORM<br>UBISTORM<br>UBISTORM<br>UBISTORM<br>UBISTORM<br>UBISTORM
 </div>
 </div>
 
