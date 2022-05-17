@@ -14,16 +14,16 @@
 </head>
 <body>
 
-
+<div class="main">
 
 <div class="menu">
 <ul>
 <li><a href="#"></a></li>
 <li class="li2 submenu">
 <div class="submenu-content">
-  <a href="#">UBISTORM 1</a>
-  <a href="#">UBISTORM 2</a>
-  <a href="#">UBISTORM 3</a>
+  <a href="#UBI 1">UBISTORM 1</a>
+  <a href="#UBI 2">UBISTORM 2</a>
+  <a href="#UBI 3">UBISTORM 3</a>
   </div>
 </li>
 <li><a href="#"></a></li>
@@ -31,6 +31,9 @@
 </ul>
 </div>
 
+<jsp:include page="demo_pull3.jsp" />
+
+</div>
 <!-- &nbsp 공백 -->
 
 </body>
